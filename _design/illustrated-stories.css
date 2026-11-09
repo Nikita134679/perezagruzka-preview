@@ -1,0 +1,37 @@
+/* Editorial illustrations, distinct from clinical photos and outcomes. */
+.illustrated-story {position:relative;margin:0;min-width:0;overflow:hidden;isolation:isolate;border-radius:clamp(16px,2.3vw,28px);background:#f4e4d7;border:1px solid #e8cbb7}
+.illustrated-story img {display:block;width:100%;height:auto;aspect-ratio:1120/747;object-fit:cover}
+.service-reel.illustrated-reel {display:grid;grid-template-columns:minmax(0,.94fr) minmax(0,1.06fr);gap:clamp(14px,3vw,36px);align-items:center;padding:clamp(10px,1.7vw,22px)}
+.illustrated-reel .illustrated-story img {aspect-ratio:1.9;object-position:50% 55%}
+.illustrated-reel-copy {display:grid;justify-items:start;gap:10px;padding:clamp(3px,1.6vw,18px)}
+.illustrated-reel-copy p {max-width:36ch}
+.illustrated-reel-copy .service-watch {margin-top:3px}
+@media(max-width:720px) {
+ .service-reel.illustrated-reel {grid-template-columns:minmax(0,1fr)}
+ .illustrated-reel .illustrated-story img {aspect-ratio:2.05}
+}
+
+/* A single club card and a compact list of benefits. */
+.loyalty-layout{display:grid;grid-template-columns:minmax(0,.94fr) minmax(0,1.06fr);gap:clamp(12px,2vw,25px);align-items:stretch}
+.loyalty-card{position:relative;isolation:isolate;overflow:hidden;min-width:0;display:flex;flex-direction:column;justify-content:center;padding:clamp(20px,4vw,54px);border-radius:clamp(20px,3vw,34px);color:#fffaf4;background:linear-gradient(132deg,#702a1a,#9d3c24 57%,#a7462c)}
+.loyalty-card::before,.loyalty-card::after{content:"";position:absolute;pointer-events:none;z-index:-1;aspect-ratio:1;border-radius:46%;border:1px solid #ffebd34f;width:76%;right:-30%;top:-20%;transform:rotate(-29deg)}
+.loyalty-card::before{box-shadow:0 0 0 15px #ffebd317,0 0 0 32px #ffebd30e}
+.loyalty-card::after{width:68%;right:-36%;top:9%}
+.loyalty-card p{margin:0}
+.loyalty-card-label{display:flex;align-items:center;gap:9px;color:#fff0e3;font-size:.9rem;font-weight:750}
+.loyalty-card-label .icon,.loyalty-note .icon{width:19px;height:19px;flex:none}
+.loyalty-welcome{display:flex;align-items:baseline;flex-wrap:wrap;gap:0 .28em;padding-top:clamp(8px,2vw,25px);font-size:clamp(23px,4.3vw,54px);line-height:1;letter-spacing:-.035em}
+.loyalty-welcome strong{font-size:clamp(60px,9vw,120px);font-weight:760;letter-spacing:-.07em;font-variant-numeric:lining-nums tabular-nums}
+.loyalty-card .loyalty-caption{margin-top:10px;color:#ffebda;font-size:clamp(.88rem,1.3vw,1.1rem)}
+.loyalty-benefits{min-width:0;display:grid;gap:9px;list-style:none;margin:0;padding:0}
+.loyalty-benefits li{display:grid;grid-template-columns:auto minmax(0,1fr);align-items:center;gap:clamp(9px,1.3vw,16px);min-height:82px;padding:10px clamp(10px,1.7vw,21px);border:1px solid #ebd5c5;border-radius:clamp(14px,2vw,22px);background:#fffaf5;color:#39281f}
+.loyalty-benefits .loyalty-birthday{grid-template-columns:auto minmax(0,1fr) auto;padding-right:9px;background:#fcf0e4}
+.loyalty-icon{display:grid;place-items:center;width:clamp(32px,4vw,48px);aspect-ratio:1;border-radius:13px;background:#f8e5d7;color:#923d25}
+.loyalty-icon .icon{width:20px;height:20px}
+.loyalty-benefits strong,.loyalty-benefits li div span{display:block}
+.loyalty-benefits strong{font-size:clamp(18px,2.15vw,27px);line-height:1.12;font-weight:800;letter-spacing:-.025em}
+.loyalty-benefits li div span{color:#63483c;margin-top:4px;font-size:clamp(.85rem,1.2vw,1rem);line-height:1.3}
+.loyalty-gift{display:block;width:clamp(55px,9vw,126px);height:auto;aspect-ratio:1.78;object-fit:cover;object-position:50% 49%;border-radius:11px}
+.loyalty-note{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px 16px;margin-top:15px}
+.loyalty-note p{display:flex;gap:8px;align-items:center;margin:0;color:#63483c;font-size:.9rem}
+@media(max-width:720px){.loyalty-layout{grid-template-columns:minmax(0,1fr)}.loyalty-benefits li{min-height:68px}.loyalty-note .button{min-height:42px}}

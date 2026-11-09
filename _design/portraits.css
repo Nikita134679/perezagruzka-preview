@@ -1,0 +1,25 @@
+/* Two real clinic portraits, with the room removed from their source photos. */
+.clinic-cutout{position:relative;isolation:isolate;overflow:hidden;min-width:0;margin:0;border-radius:clamp(17px,3vw,33px);background:radial-gradient(ellipse at 62% 28%,#fffbf3 0%,#f9e6d6 45%,#e8bea8 100%);border:1px solid #edcfbc}
+.clinic-cutout img{display:block;position:absolute;z-index:1;inset:auto 0 0;width:100%;height:97%;object-fit:contain;object-position:center bottom}
+.clinic-cutout::before{content:"";position:absolute;z-index:0;inset:8% 8% 12%;border-radius:50%;background:radial-gradient(ellipse,#fff8efb3,transparent 70%);pointer-events:none}
+.clinic-cutout figcaption{position:absolute;z-index:2;bottom:12px;left:12px;right:auto;max-width:calc(100% - 24px);padding:8px 11px;color:#4d2d20;background:#fffaf2f2;border:1px solid #fff6ec;border-radius:11px;box-shadow:0 5px 20px #6a361527}
+.clinic-cutout figcaption small,.clinic-cutout figcaption strong{display:block;line-height:1.2}
+.clinic-cutout figcaption small{font-size:.72rem;color:#8b3c24;font-weight:820;margin-bottom:3px}
+.clinic-cutout figcaption strong{font-size:clamp(.78rem,1.5vw,1rem)}
+.clinic-team-hero h1{max-width:none;font-size:clamp(47px,7vw,96px)}
+.clinic-team-hero h1 span{display:block;color:var(--accent)}
+.clinic-cutout-chief{aspect-ratio:1.2}
+.clinic-cutout-chief img{width:125%;max-width:none;left:-17%;height:96%}
+.price-help:has(.clinic-cutout){display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);align-items:center;gap:16px}
+.price-help:has(.clinic-cutout) .actions{grid-column:1/-1}
+.price-help .clinic-cutout{aspect-ratio:1.46;max-height:290px}
+.price-help .clinic-cutout img{width:84%;left:8%;height:96%}
+@media(max-width:720px){
+ .clinic-cutout-chief{aspect-ratio:1.24}
+ .price-help:has(.clinic-cutout){grid-template-columns:minmax(0,1fr)}
+ .price-help .clinic-cutout{max-height:238px}
+}
+.clinic-team-hero .clinic-cutout{border:0;background:none;overflow:visible}
+.clinic-team-hero .clinic-cutout::before{inset:4% -2% 0;background:radial-gradient(ellipse at 56% 53%,#eecab2ad,transparent 67%)}
+.clinic-team-hero .clinic-cutout img{mask-image:linear-gradient(#000 0 87%,transparent 100%)}
+.clinic-team-hero .actions .button + .button{color:var(--accent);background:#fffdfb;border-color:#e4c3b1}

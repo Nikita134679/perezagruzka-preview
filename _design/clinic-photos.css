@@ -1,0 +1,8 @@
+/* Match each original photo's framing; don't crop the upright PicoSure image. */
+.hero .hero-visual:has(img[src$="/clinic-room.webp"]){aspect-ratio:3 / 2;max-height:none}
+.hero .hero-visual:has(img[src$="/picosure.webp"]){aspect-ratio:830 / 1250;width:min(100%,390px);max-height:none;justify-self:center}
+.hero .hero-visual:has(img[src$="/picosure.webp"]) img{object-fit:contain;padding:0;background:#ece4df}
+@media(max-width:720px){
+ .hero .hero-visual:has(img[src$="/picosure.webp"]){width:min(100%,275px)}
+}
+.hero:has(img[src$="/picosure.webp"]) h1{font-size:clamp(29px,4.5vw,64px);max-width:100%;overflow-wrap:normal;text-wrap:balance}

@@ -1,0 +1,42 @@
+/* Price finder — shared folio background, a quieter reading surface for tariffs. */
+.price-hero .crumb{margin-bottom:clamp(19px,4vw,49px)}
+.price-hero-grid{display:grid;grid-template-columns:minmax(0,.95fr) minmax(0,1.05fr);align-items:center;gap:clamp(20px,4.5vw,66px)}
+.price-hero h1{max-width:none;font-size:clamp(38px,5.4vw,78px);line-height:.94;letter-spacing:-.067em}
+.price-hero h1 span{display:block;color:var(--accent)}
+.price-hero .lead{max-width:33ch}
+.price-quick-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+.price-quick{display:grid;align-content:start;gap:9px;min-width:0;padding:clamp(11px,2vw,25px);min-height:clamp(122px,15vw,187px);background:#fffaf4;border:1px solid #ebd0bd;border-radius:clamp(14px,2.5vw,25px);color:#503023;text-decoration:none;transition:background .2s,transform .2s}
+.price-quick:nth-child(2),.price-quick:nth-child(3){background:#f9e8dc}
+.price-quick:hover{background:#f5ddcc;text-decoration:none;transform:translateY(-3px)}
+.price-quick strong{font-size:clamp(17px,2vw,29px);line-height:1.04;letter-spacing:-.042em}
+.price-quick span{display:flex;justify-content:space-between;align-items:center;gap:5px;color:var(--accent)}
+.price-quick small,.price-quick-more{font-size:.73rem;font-weight:850}
+.price-quick-more .icon{width:15px;height:15px}
+.price-toolbar{display:grid;grid-template-columns:minmax(0,1.3fr) repeat(2,minmax(0,1fr));gap:9px;padding:clamp(12px,2vw,22px);background:#f7e9de;border:1px solid #ead2c0;border-radius:20px}
+.price-toolbar label{display:grid;gap:4px;min-width:0;font-weight:800;font-size:.88rem;color:#593627}
+.price-toolbar :is(input,select){box-sizing:border-box;width:100%;min-width:0;min-height:44px;border:1px solid #e0c6b6;border-radius:11px;background:#fffcf8;padding:8px 10px;color:var(--ink);font-weight:680}
+.price-results{display:flex;align-items:center;justify-content:space-between;gap:10px;min-height:45px;color:#674536}
+.price-results p{font-size:.9rem;font-weight:760}
+.price-reset{color:var(--accent);background:none;border:0;font-weight:810;text-decoration:underline;text-underline-offset:3px;padding:6px 3px}
+.rate-group{padding:0;background:#fffdfa;border-radius:17px}
+.rate-group summary{display:grid;grid-template-columns:minmax(0,1fr) auto auto;align-items:center;gap:clamp(5px,2vw,16px);padding:clamp(10px,2vw,20px) clamp(12px,2.5vw,26px);list-style:none}
+.rate-group summary::-webkit-details-marker{display:none}
+.rate-group summary strong{display:block;font-size:clamp(17px,2.3vw,28px);line-height:1.08;letter-spacing:-.025em}
+.rate-group summary small{display:block;color:var(--accent);font-size:.72rem;font-weight:860;text-transform:uppercase;letter-spacing:.09em;margin-bottom:4px}
+.rate-group summary .icon{color:var(--accent);transition:transform .18s}
+.rate-group[open] summary .icon{transform:rotate(180deg)}
+.rate-count{font-size:.78rem;font-weight:810;white-space:nowrap;color:#7c482e;background:#f8e8dc;border-radius:999px;padding:4px 8px}
+.rate-content{padding:0 clamp(12px,2.5vw,26px) 10px}.rate-content>.muted{margin-bottom:8px}
+.rate-content .price-row b{font-variant-numeric:tabular-nums}
+.price-help{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:clamp(16px,3vw,34px);border-radius:22px;background:#4a2b20;color:#fff4e8}
+.price-help p{margin-top:8px;color:#f3dbcd}.price-help .actions{margin:0;flex:none}
+.price-help .primary{background:#f8c8a6;color:#422014;border-color:#f8c8a6}
+@media(max-width:900px){.price-help{display:grid}.price-help .actions{margin-top:4px}}
+@media(max-width:720px){
+ .price-hero-grid{grid-template-columns:minmax(0,1fr)}
+ .price-toolbar{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .price-search{grid-column:1/-1}
+ .price-hero .actions .button{min-height:43px;padding:7px 10px;font-size:.86rem;gap:5px}
+ .price-hero .actions .icon{width:16px;height:16px}
+}
+@media(prefers-reduced-motion:reduce){.price-quick,.rate-group summary .icon{transition:none}}

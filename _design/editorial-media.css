@@ -1,0 +1,37 @@
+/* A lightweight photographic layer: original site grids and folio motion stay in place. */
+.editorial-split{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);align-items:center;gap:clamp(12px,3vw,34px)}
+.editorial-photo{margin:0;position:relative;overflow:hidden;aspect-ratio:1.5;border-radius:clamp(17px,2.6vw,30px);background:#e9d8cc;border:1px solid #e9cdbb}
+.editorial-photo img{display:block;width:100%;height:100%;object-fit:cover;object-position:center 42%}
+.editorial-copy{padding:clamp(4px,1.3vw,17px)}
+.editorial-copy>p{color:#65483c;margin:0 0 12px}
+.editorial-team{display:flex;align-items:center;justify-content:space-between;gap:10px;min-width:0;padding:10px 12px;border:1px solid #ecd5c2;border-radius:15px;background:#fffaf5;color:#533226;text-decoration:none}
+.editorial-team:hover{background:#f8e9dc;text-decoration:none}.editorial-team strong,.editorial-team small{display:block;line-height:1.2}.editorial-team small{font-size:.76rem;margin-top:4px;color:#684739}
+.editorial-portraits{display:flex;flex:none;padding-left:2px}.editorial-portraits img{display:block;width:clamp(30px,3.7vw,48px);height:clamp(30px,3.7vw,48px);object-fit:cover;object-position:50% 23%;border:2px solid #fffaf5;border-radius:50%;margin-left:-2px}
+.editorial-portraits img+img{margin-left:-9px}
+.service-price-note .editorial-team,.price-help .editorial-team{margin-top:13px}
+.service-price-note .editorial-team{gap:5px;padding:8px}.service-price-note .editorial-team .icon{display:none}
+.editorial-procedure{align-items:stretch}.editorial-procedure .editorial-photo{aspect-ratio:auto;min-height:230px}.editorial-procedure .editorial-photo img{position:absolute;inset:0}
+.editorial-procedure .service-steps{grid-template-columns:minmax(0,1fr)}
+.editorial-procedure .service-steps li{display:flex;gap:11px;align-items:flex-start}
+.editorial-procedure .service-steps li>span{width:34px;flex:none;margin:0}
+.editorial-procedure .service-steps h3{font-size:clamp(18px,2.25vw,25px)}
+.editorial-procedure .service-steps p{margin-top:5px}
+.price-help:has(.price-consult-photo){display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:15px}.price-help .price-consult-photo{max-height:235px;aspect-ratio:1.57}.price-help:has(.price-consult-photo) .actions{grid-column:1/-1}.price-help .editorial-team{max-width:390px}
+.editorial-gallery{margin:0;overflow:hidden;min-width:0;border:1px solid #e9ccbb;border-radius:clamp(18px,2.7vw,35px);background:#fff7ed;box-shadow:0 19px 37px #67331c1a}
+.editorial-case-preview{position:relative;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:3px;background:#fff;isolation:isolate}
+.editorial-case-preview .compare-frame{position:relative;display:block;overflow:hidden;aspect-ratio:1.28}
+.editorial-case-preview img{position:absolute;max-width:none;object-fit:fill}
+.editorial-gallery figcaption{display:grid;grid-template-columns:1fr 1fr;padding:8px 0;text-align:center;font-size:.85rem;color:#623927;font-weight:780}
+#advantages .editorial-proof{position:relative;isolation:isolate;overflow:hidden;background:#462419;color:#fff5ed}
+#advantages .editorial-proof .proof-photo{position:absolute;inset:0;z-index:-2;width:100%;height:100%;object-fit:cover;object-position:center 48%}
+#advantages .editorial-proof::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(105deg,#321a12f2,#361e15bd 51%,#30190f63)}
+#advantages .editorial-proof .proof-since{color:#fff3e9}
+@media(max-width:1000px){.editorial-split .grid.four{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:720px){.editorial-split,.price-help:has(.price-consult-photo){grid-template-columns:minmax(0,1fr)}.editorial-procedure .editorial-photo{aspect-ratio:1.67;min-height:0}.price-help .price-consult-photo{max-height:210px}.editorial-portraits img{width:38px;height:38px}}
+.price-quick img{width:clamp(46px,5.5vw,78px);height:clamp(32px,3.8vw,54px);object-fit:cover;border-radius:8px}
+.price-quick>span:first-child{align-items:flex-start}
+.service-price-note .editorial-portraits img{width:34px;height:34px}.editorial-team>span:nth-child(2){min-width:0;overflow-wrap:anywhere}
+.editorial-case-preview{display:block}
+.editorial-case-preview .compare-frame{position:absolute;inset:0;aspect-ratio:auto}
+.editorial-case-preview .compare-frame.after{clip-path:inset(0 0 0 50%)}
+.editorial-case-preview::after{content:"";position:absolute;inset:0 auto 0 50%;border-left:2px solid white;pointer-events:none}
