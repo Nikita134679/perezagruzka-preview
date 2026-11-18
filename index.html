@@ -637,6 +637,15 @@ body:has(.top.menu-open) .bookmarks{visibility:hidden}
 .question-item[open] summary{color:#833817}
 .question-item>p{padding:0 32px 13px 0;color:var(--muted);font-size:clamp(14px,1.15vw,16px);line-height:1.57}
 @media(max-width:760px){.member-head,.member-layout,.question-layout{grid-template-columns:1fr}.question-item>p{padding-right:0}}
+
+/* Test-removal USP and supplied clinic logo */
+.top .brand img.brand-logo{width:64px;height:64px;object-fit:contain;border-radius:50%;filter:drop-shadow(0 8px 18px rgba(88,38,13,.18));transition:transform .25s ease}.brand:hover .brand-logo{transform:rotate(-2deg) scale(1.035)}
+.test-removal{position:relative}.test-removal::before{content:"";position:absolute;z-index:-1;width:clamp(240px,33vw,520px);aspect-ratio:1;right:2%;top:4%;border-radius:50%;background:radial-gradient(circle,#f2b98f55 0 1px,transparent 2px 100%);background-size:15px 15px;mask-image:radial-gradient(circle,#000,transparent 72%);opacity:.46}
+.test-removal-shell{position:relative;display:grid;grid-template-columns:minmax(0,1.35fr) minmax(300px,.65fr);gap:clamp(28px,5vw,80px);padding:clamp(28px,5vw,72px);overflow:hidden;border:1px solid #ead4c3;border-radius:34px;background:linear-gradient(135deg,#fffaf6 0%,#f9ede4 58%,#f3ddcd 100%);box-shadow:0 24px 70px rgba(91,47,22,.10)}
+.test-removal-shell::after{content:"";position:absolute;width:390px;aspect-ratio:1;right:-160px;top:-190px;border:1px solid #d88d5b55;border-radius:50%;box-shadow:0 0 0 34px #d88d5b12,0 0 0 70px #d88d5b0b;pointer-events:none}.test-removal-copy{position:relative;z-index:1}.test-removal h2{max-width:900px}.test-removal-lead{max-width:760px;margin-top:22px;font-size:clamp(16px,1.5vw,21px);line-height:1.65;color:#5f5046}.test-removal-action{display:flex;align-items:center;gap:18px;margin-top:28px}.test-removal-action>span{max-width:240px;color:#755b49;font-size:12px;line-height:1.45}
+.test-removal-process{position:relative;align-self:stretch;display:flex;flex-direction:column;justify-content:flex-end;min-height:300px;padding:28px;border-radius:26px;background:#2a1c14;color:#fff;overflow:hidden}.test-removal-index{position:absolute;right:16px;top:0;font-size:clamp(86px,10vw,155px);font-weight:700;line-height:.95;letter-spacing:-.1em;color:#e87331;opacity:.92}.test-removal-process h3{position:relative;font-size:clamp(24px,2.6vw,39px);max-width:340px}.test-removal-process p{position:relative;margin-top:12px;color:#e9dcd3;font-size:14px;line-height:1.6}.test-removal-pulse{position:absolute;inset:24px auto auto 24px;display:flex;gap:7px}.test-removal-pulse i{width:8px;height:8px;border-radius:50%;background:#ee7330;box-shadow:0 0 0 6px #ee733018}.test-removal-pulse i:nth-child(2){opacity:.58}.test-removal-pulse i:nth-child(3){opacity:.25}
+.test-benefits{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:12px}.test-benefits article{display:flex;gap:15px;align-items:flex-start;padding:22px;border:1px solid #eaded5;border-radius:20px;background:#fff}.test-benefits article>.icon{width:26px;height:26px;color:var(--accent)}.test-benefits h3{font-size:20px}.test-benefits p{margin-top:6px;color:var(--muted);font-size:13px;line-height:1.5}
+@media(max-width:760px){.top .brand img.brand-logo{width:49px;height:49px}.test-removal-shell{grid-template-columns:1fr;padding:22px;border-radius:24px;gap:22px}.test-removal-lead{font-size:15px;margin-top:16px}.test-removal-action{align-items:flex-start;flex-direction:column;margin-top:21px}.test-removal-process{min-height:260px;padding:22px}.test-benefits{grid-template-columns:1fr;gap:8px}.test-benefits article{padding:16px;border-radius:16px}.test-benefits h3{font-size:18px}.test-removal::before{opacity:.25}}
 </style>
 <script defer src="/_redesign-v25/home.js"></script>
 <link rel="icon" type="image/svg+xml" href="/_assets/static.tildacdn.com/14579b9e6e4ca8/favicon_black.svg"><link rel="apple-touch-icon" href="/_assets/static.tildacdn.com/c1977f5291d886/favicon.png"><link rel="stylesheet" href="/_design/chrome.css"><link rel="stylesheet" href="/_design/editorial-media.css">
@@ -678,7 +687,7 @@ body:has(.top.menu-open) .bookmarks{visibility:hidden}
 <a class="skip" href="#about">Перейти к содержимому</a>
 <header class="top" id="top">
  <div class="bar wrap">
-  <a class="brand" href="/" aria-label="Перезагрузка — главная"><img src="/_assets/static.tildacdn.com/712a542ab54b16/_.svg" alt="Перезагрузка" width="189" height="62"></a>
+  <a class="brand" href="/" aria-label="Перезагрузка — главная"><img class="brand-logo" src="/assets/logo-perezagruzka-pro.webp" alt="Клиника «Перезагрузка PRO» — удаление татуировок и татуажа" width="640" height="640"></a>
   <div class="header-contacts">
    <a class="header-contact header-address" href="#contacts"><svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg><span><b>Октябрьской Революции, 31а</b><small>Уфа · На карте</small></span></a>
    <a class="header-contact header-phone" href="tel:+79874776711"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg><span><b>8 (987) 477-67-11</b><small>Ежедневно, 10:00–20:00</small></span></a>
@@ -793,6 +802,34 @@ body:has(.top.menu-open) .bookmarks{visibility:hidden}
      <form method="dialog"><button class="close" type="submit" aria-label="Закрыть фотографию" autofocus><svg class="icon" aria-hidden="true"><use href="#i-close"/></svg></button></form>
      <figure><img alt=""><figcaption id="centre-photo-caption"></figcaption></figure>
     </dialog>
+   </div>
+  </div>
+  <div class="stack-slot" id="test-removal" tabindex="-1">
+   <div class="stack-card">
+    <section data-chapter="test-removal" class="wrap section test-removal" aria-labelledby="test-removal-title">
+     <div class="test-removal-shell">
+      <div class="test-removal-copy">
+       <p class="eyebrow label">Бесплатная тестовая процедура · участок 1×1 см</p>
+       <h2 id="test-removal-title">Тестовое лазерное удаление татуировки</h2>
+       <p class="test-removal-lead">Сомневаетесь, подойдёт ли вам лазерное удаление? В медицинском центре «Перезагрузка» можно сначала проверить результат на небольшом участке татуировки — без решения о полном курсе.</p>
+       <div class="test-removal-action">
+        <a class="button primary" href="#booking" data-book><svg class="icon" aria-hidden="true"><use href="#i-calendar"/></svg> Записаться на тест</a>
+        <span>Несколько вспышек под контролем специалиста</span>
+       </div>
+      </div>
+      <div class="test-removal-process" aria-label="Как проходит тестовая процедура">
+       <span class="test-removal-index" aria-hidden="true">1×1</span>
+       <h3>Сразу увидите реакцию кожи</h3>
+       <p>Специалист выполняет несколько вспышек лазера на ограниченном участке. Вы оцениваете реальный эффект и понимаете, стоит ли продолжать полный курс.</p>
+       <div class="test-removal-pulse" aria-hidden="true"><i></i><i></i><i></i></div>
+      </div>
+     </div>
+     <div class="test-benefits" aria-label="Преимущества тестового удаления">
+      <article><svg class="icon" aria-hidden="true"><use href="#i-laser"/></svg><div><h3>Наглядность</h3><p>Вы лично наблюдаете эффект лазера на своей татуировке.</p></div></article>
+      <article><svg class="icon" aria-hidden="true"><use href="#i-shield"/></svg><div><h3>Уверенность</h3><p>Принимаете взвешенное решение о дальнейшем удалении.</p></div></article>
+      <article><svg class="icon" aria-hidden="true"><use href="#i-clinic"/></svg><div><h3>Безопасность</h3><p>Процедура проходит под контролем специалиста клиники.</p></div></article>
+     </div>
+    </section>
    </div>
   </div>
   <div class="stack-slot" id="services" tabindex="-1">
@@ -1460,5 +1497,8 @@ body:has(.top.menu-open) .bookmarks{visibility:hidden}
   controls.hidden = false;
 })();
 </script>
+
+<script>var yWidgetSettings={buttonText:'Онлайн-запись'};</script>
+<script type="text/javascript" src="https://w1027662.yclients.com/widgetJS" charset="UTF-8"></script>
 </body>
 </html>
