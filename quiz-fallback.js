@@ -82,6 +82,11 @@
     result.querySelector('.quiz-restart').addEventListener('click', reset);
     render();
   };
-  if (document.readyState === 'loading') addEventListener('DOMContentLoaded', init, {once:true});
-  else init();
+  let attempts = 0;
+  const boot = () => {
+    init();
+    if (!window.__heroQuizReady && attempts++ < 50) setTimeout(boot, 200);
+  };
+  if (document.readyState === 'loading') addEventListener('DOMContentLoaded', boot, {once:true});
+  else boot();
 })();
